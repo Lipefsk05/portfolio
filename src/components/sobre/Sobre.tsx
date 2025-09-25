@@ -6,13 +6,13 @@ import ProfileCard from '@/components/profile-card/ProfileCard'
 
 export default function Sobre() {
     return (
-        <section className="sobre">
+        <section className="sobre blur-background" id="sobre">
             <h2>Sobre</h2>
-            <div className="content">
+            <article className="content">
                 <article className="texts">
 
-                    <h1>Felipe Portes</h1>
-                    <h4>Olá, vou falar um pouco sobre mim: Sou uma pessoa sociável, paciente e curiosa, sempre em busca de novos aprendizados e desafios. Tenho grande empenho em tudo o que faço e valorizo o trabalho em equipe, buscando sempre contribuir para um ambiente colaborativo e produtivo. Possuo experiência em programação, liderança e no relacionamento interpessoal, o que me permite lidar bem com diferentes perfis de pessoas e situações. Minha capacidade de adaptação e desejo constante de aprendizado me ajudam a enfrentar desafios com criatividade e determinação, sempre focado no crescimento profissional e no sucesso dos projetos em que me envolvo.</h4>
+                    <h1>Um pouco sobre mim:</h1>
+                    <h4>Sou uma pessoa sociável, paciente e curiosa, sempre em busca de novos aprendizados e desafios. Tenho grande empenho em tudo o que faço e valorizo o trabalho em equipe, buscando sempre contribuir para um ambiente colaborativo e produtivo. Possuo experiência em programação, liderança e no relacionamento interpessoal, o que me permite lidar bem com diferentes perfis de pessoas e situações. Minha capacidade de adaptação e desejo constante de aprendizado me ajudam a enfrentar desafios com criatividade e determinação, sempre focado no crescimento profissional e no sucesso dos projetos em que me envolvo.</h4>
                 </article>
                 <article className="image">
 
@@ -32,7 +32,7 @@ export default function Sobre() {
                         onContactClick={() => console.log('Contact clicked')}
                     />
                 </article>
-            </div>
+            </article>
         </section>
     )
 }

@@ -1,9 +1,29 @@
+.habilidades h2{
+    margin: 15px 0 35px;
+}
+
+.habilidades{
+    padding-bottom: 50px;
+}
+
 .icons{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
+    gap: 100px;
 }
 
 .icon{
-    width: 25%;
+    width: 100px;
+    opacity: .7;
+    transition: ease-in-out .1s;
+
+}
+
+.icon:hover{
+    /* scale: 0.9; */
+}
+
+.icon::before{
+    background-color: aliceblue;
 }
