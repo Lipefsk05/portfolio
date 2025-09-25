@@ -1,14 +1,5 @@
 .hero {
-    margin: 0 auto;
-    width: 90%;
-    backdrop-filter: blur(5px);
-    background-color: rgba(0, 0, 0, 0);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 85vh;
-    padding: 1%;
+  height: 85vh;
 }
 
 .logoHero{

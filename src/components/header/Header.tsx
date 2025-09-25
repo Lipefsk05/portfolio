@@ -3,20 +3,20 @@ import "./Style.css";
 export default function Header(){
     return(
         <header>
-            <section id="logo" className="heSec">
-                <h1>LOGO</h1>
+            <div id="logo" className="heSec">
+                <h5>LOGO</h5>
                 <select name="language" id="">
                     <option value="pt">PT</option>
                     <option value="en">EN</option>
                 </select>
-            </section>
-            <section id="pages" className="heSec">
-                <h1>Home</h1>
-                <h1>Sobre</h1>
-                <h1>Habilidades</h1>
-                <h1>Projetos</h1>
-                <h1>Contato</h1>
-            </section>
+            </div>
+            <div id="pages" className="heSec">
+                <h5>Home</h5>
+                <h5>Sobre</h5>
+                <h5>Habilidades</h5>
+                <h5>Projetos</h5>
+                <h5>Contato</h5>
+            </div>
         </header>
     )
 }

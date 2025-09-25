@@ -3,7 +3,7 @@
 
 
 :root {
-  --background: #000000;
+  --background: #4f0063;
   --font-color: #ffffff;
 
   body {
@@ -15,4 +15,36 @@
   .font-poppins {
     font-family: "Poppins", sans-serif;
   }
+}
+
+section {
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, .5);
+  width: 90%;
+  margin: 0 auto 25px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1%;
+}
+
+main{
+  padding-top: 100px;
+}
+
+h1{
+  font-size: xxx-large;
+}
+h2{
+  font-size: xx-large;
+}
+h3{
+  font-size: x-large;
+}
+h4{
+  font-size: large;
+}
+h5{
+  font-size: medium;
 }

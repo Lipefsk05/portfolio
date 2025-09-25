@@ -12,15 +12,15 @@ import FadeContent from '@/components/fadecontent/FadeContent'
 
 export default function Hero(){
     return(
-        <div className="hero">  
+        <section className="hero">  
             <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} className="animateLogo">
                 <Image src={Logo} alt="Logo" className="logoHero" />
             </FadeContent>
-        <section className="redesLogo">
+        <article className="redesLogo">
             <Image src={Insta} alt="Instagram logo" className="instaLogo" />
             <Image src={Linkedin} alt="LinkedIn logo" className="linkedinLogo" />
             <Image src={Email} alt="Email logo" className="emailLogo" />
+        </article>
         </section>
-        </div>
     )
 }
