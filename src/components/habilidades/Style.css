@@ -10,14 +10,14 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
+    align-items: center;
     gap: 100px;
 }
 
 .icon{
-    width: 100px;
+    width: 150px;
     opacity: .7;
     transition: ease-in-out .1s;
-
 }
 
 .icon:hover{
@@ -26,4 +26,27 @@
 
 .icon::before{
     background-color: aliceblue;
+}
+
+.square{
+    outline: solid 3px #A51D2D;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.divIcon{
+    text-align: center;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    color: #A51D2D;
+}
+
+.divIcon h5{
+    display: none;
+}
+
+
+.divIcon:hover h5{
+    display: contents;
 }
