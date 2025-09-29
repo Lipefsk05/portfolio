@@ -2,8 +2,8 @@ import "./Style.css";
 import Logo from "../../../public/logo-small.svg"
 import Image from "next/image";
 
-export default function Header(){
-    return(
+export default function Header() {
+    return (
         <header>
             <div id="logo" className="heSec">
                 <Image src={Logo} alt="logo" className="logo" />
@@ -16,8 +16,9 @@ export default function Header(){
                 <a href="#hero"><h5>Home</h5></a>
                 <a href="#sobre"><h5>Sobre</h5></a>
                 <a href="#habilidades"><h5>Habilidades</h5></a>
-                <h5>Projetos</h5>
-                <h5>Contato</h5>
+                <a href="#projetos"><h5>Projetos</h5></a>
+                <a href="#feedbacks"><h5>FeedBacks</h5></a>
+                <a href="#contato"><h5>Contato</h5></a>
             </div>
         </header>
     )

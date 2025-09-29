@@ -1,52 +1,56 @@
-.habilidades h2{
-    margin: 15px 0 35px;
-}
+    .habilidades h2 {
+        margin: 15px 0 35px;
+    }
 
-.habilidades{
-    padding-bottom: 50px;
-}
+    .habilidades {
+        padding-bottom: 50px;
+    }
 
-.icons{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    align-items: center;
-    gap: 100px;
-}
+    .icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 70px;
+        padding: 0 25%;
+        align-items: center;
+    }
 
-.icon{
-    width: 150px;
-    opacity: .7;
-    transition: ease-in-out .1s;
-}
+    .icon {
+        opacity: .8;
+        transition: ease-in-out .1s;
+    }
 
-.icon:hover{
-    /* scale: 0.9; */
-}
+    .square {
+        outline: solid 3px #A51D2D;
+        border-radius: 5px;
+        width: 70%;
+        margin: 15%;
+    }
 
-.icon::before{
-    background-color: aliceblue;
-}
+    .divIcon {
+        width: 150px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #A51D2D;
+        transition: ease-in-out .1s;
+    }
 
-.square{
-    outline: solid 3px #A51D2D;
-    border-radius: 5px;
-    width: 100px;
-}
+    .divIcon:hover{
+        scale: 1.1;
+    }
 
-.divIcon{
-    text-align: center;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    color: #A51D2D;
-}
+    .divIcon h4 {
+        position: absolute;
+        transition: ease-in-out .1s;
+        opacity: 0;
+    }
 
-.divIcon h5{
-    display: none;
-}
-
-
-.divIcon:hover h5{
-    display: contents;
-}
+    .divIcon:hover h4 {
+        position: absolute;
+        transform: translateY(300%);
+        opacity: 1;
+    }

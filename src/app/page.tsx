@@ -1,16 +1,18 @@
 'use client';
-import Galaxy from "@/components/galaxy/Galaxy";
 import PixelBlast from '@/components/pixel-blast/PixelBlast';
 import Header from "@/components/header/Header";
 import Hero from "@/components/hero/Hero"
 import Sobre from "@/components/sobre/Sobre"
 import Habilidades from "@/components/habilidades/Habilidades";
 import Projetos from "@/components/projetos/Projetos";
+import Feedbacks from "@/components/feedbacks/FeedBacks"
+import Contato from "@/components/contato/Contato"
+import Footer from '@/components/footer/Footer';
 
 export default function Home() {
   return (
     <div style={{ position: 'relative' }}>
-      <div
+      <div className="background"
         style={{
           position: 'fixed',
           top: 0,
@@ -20,15 +22,6 @@ export default function Home() {
           zIndex: -1,
         }}
       >
-        {/* <Galaxy
-          mouseRepulsion={false}
-          mouseInteraction={false}
-          density={1}
-          glowIntensity={0.3}
-          saturation={1}
-          hueShift={150}
-          rotationSpeed={0}
-        /> */}
         <PixelBlast
           variant="circle"
           pixelSize={6}
@@ -56,6 +49,9 @@ export default function Home() {
         <Sobre />
         <Habilidades />
         <Projetos />
+        <Feedbacks />
+        <Contato />
+        <Footer />
       </main>
     </div>
   );

@@ -1,0 +1,12 @@
+.footer{
+    outline: none;
+    border-radius: none;
+    padding: 1%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.socials{
+    display: flex;
+    gap: 20px;
+}

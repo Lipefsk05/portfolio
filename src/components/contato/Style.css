@@ -1,0 +1,48 @@
+.contato {
+    margin-bottom: 50px;
+    padding: 0 300px 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    margin: 15px 0 25px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+}
+
+.nomeEmail {
+    display: flex;
+    gap: 10%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.contato input,
+#project {
+    all: unset;
+    outline: solid 1px #4a4a4a;
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px 10px;
+}
+
+#project {
+    min-height: 400px;
+    resize: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: normal;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+
+.message input {
+    height: 100px;
+}

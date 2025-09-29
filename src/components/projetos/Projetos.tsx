@@ -29,7 +29,7 @@ export default function Gallery() {
     const [hovered, setHovered] = useState<number | null>(null);
 
     return (
-        <section className="projetos blur-background">
+        <section className="projetos blur-background" id="projetos">
             <h2>Projetos</h2>
             <article className="gallery">
                 {images.map((img, i) => (
