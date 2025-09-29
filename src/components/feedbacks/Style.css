@@ -1,0 +1,17 @@
+.feedbacks{
+    display: flex;
+    margin-bottom: 50px;
+    padding: 0 150px 50px;
+}
+
+.title{
+    margin: 15px 0 25px;
+}
+
+.comments{
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
