@@ -1,56 +1,67 @@
-    .habilidades h2 {
-        margin: 15px 0 35px;
-    }
+.habilidades {
+    padding-bottom: 50px;
+    backdrop-filter: blur(0px);
+    outline: none;
+    width: 100%;
+    padding: 0 0 50px;
+    margin: 0;
+}
 
-    .habilidades {
-        padding-bottom: 50px;
-    }
+.habilidades h2 {
+    margin: 15px 0 35px;
+}
 
-    .icons {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 70px;
-        padding: 0 25%;
-        align-items: center;
-    }
+.habilidades svg{
+    /* color: #A51D2D; */
+    color: #fff;
+}
 
-    .icon {
-        opacity: .8;
-        transition: ease-in-out .1s;
-    }
 
-    .square {
-        outline: solid 3px #A51D2D;
-        border-radius: 5px;
-        width: 70%;
-        margin: 15%;
-    }
+/* .icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+    padding: 0 25%;
+    align-items: center;
+}
 
-    .divIcon {
-        width: 150px;
-        height: 150px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: #A51D2D;
-        transition: ease-in-out .1s;
-    }
+.icon {
+    opacity: .8;
+    transition: ease-in-out .1s;
+}
 
-    .divIcon:hover{
-        scale: 1.1;
-    }
+.square {
+    outline: solid 3px #A51D2D;
+    border-radius: 5px;
+    width: 70%;
+    margin: 15%;
+}
 
-    .divIcon h4 {
-        position: absolute;
-        transition: ease-in-out .1s;
-        opacity: 0;
-    }
+.divIcon {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #A51D2D;
+    transition: ease-in-out .1s;
+}
 
-    .divIcon:hover h4 {
-        position: absolute;
-        transform: translateY(300%);
-        opacity: 1;
-    }
+.divIcon:hover {
+    scale: 1.1;
+}
+
+.divIcon h4 {
+    position: absolute;
+    transition: ease-in-out .1s;
+    opacity: 0;
+}
+
+.divIcon:hover h4 {
+    position: absolute;
+    transform: translateY(300%);
+    opacity: 1;
+} */

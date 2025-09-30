@@ -7,52 +7,47 @@ import Java from "../../../public/java.svg"
 import Js from "../../../public/js.svg"
 import Ts from "../../../public/ts.svg"
 import Image from "next/image"
+import LogoLoop from "@/components/logoloop/LogoLoop";
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
+import { FaJsSquare, FaCss3Alt, FaHtml5, FaJava } from 'react-icons/fa';
+import { RiVideoAiFill, RiVideoOnAiFill } from "react-icons/ri";
 
+const techLogos = [
+    { node: <SiReact />, title: "React", href: "https://react.dev" },
+    { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
+    { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
+    { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+    { node: <FaJsSquare />, title: "JavaScript CSS", href: "" },
+    { node: <RiVideoAiFill />, title: "VideoEditor", href: "" },
+    { node: <RiVideoOnAiFill />, title: "VideoMaker", href: "" },
+    { node: <FaCss3Alt />, title: "Css", href: "" },
+    { node: <FaHtml5 />, title: "Html", href: "" },
+    { node: <FaJava />, title: "Java", href: "" },
+];
+
+// Alternative with image sources
+const imageLogos = [
+    { src: "/logos/company1.png", alt: "Company 1", href: "https://company1.com" },
+    { src: "/logos/company2.png", alt: "Company 2", href: "https://company2.com" },
+    { src: "/logos/company3.png", alt: "Company 3", href: "https://company3.com" },
+];
 
 export default function Habilidades() {
     return (
         <section className="habilidades blur-background" id="habilidades">
-            <article><h2>Habilidades</h2></article>
-            <article className="icons" >
-
-                <div className="divIcon">
-                    <Image src={Camera} alt="camera" className="icon" />
-                    <h4>camera</h4>
-                </div>
-
-                <div className="divIcon">
-                    <Image src={Css} alt="css" className="icon" />
-                    <h4>Css</h4>
-                </div>
-
-
-                <div className="divIcon">
-                    <Image src={Html} alt="html" className="icon" />
-                    <h4>Html</h4>
-                </div>
-
-                <div className="divIcon">
-                    <Image src={Java} alt="java" className="icon" />
-                    <h4>Java</h4>
-                </div>
-
-                <div className="divIcon">
-                    <Image src={Js} alt="Js" className="icon square" />
-                    <h4>Js</h4>
-                </div>
-
-                <div className="divIcon">
-                    <Image src={Ts} alt="Ts" className="icon square" />
-                    <h4>Ts</h4>
-                </div>
-
-                <div className="divIcon">
-                    <Image src={Cpp} alt="cpp" className="icon" />
-                    <h4>C++</h4>
-                </div>
-
-
-            </article>
+            <h2>Habilidades</h2>
+            <LogoLoop
+                logos={techLogos}
+                speed={120}
+                direction="left"
+                logoHeight={48}
+                gap={40}
+                pauseOnHover
+                scaleOnHover
+                fadeOut
+                fadeOutColor="#ffffff"
+                ariaLabel="Technology partners"
+            />
         </section>
     )
 }
