@@ -12,7 +12,7 @@ import TextType from '@/components/text-type/TextType';
 export default function Hero() {
     return (
         <section className="hero" id="hero">
-            <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} className="animateLogo">
+            <FadeContent blur={true} easing="ease-out" initialOpacity={0} className="animateLogo">
                 <Image src={Logo} alt="Logo" className="logoHero" />
                 <TextType
 

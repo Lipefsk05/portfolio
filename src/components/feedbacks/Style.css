@@ -1,17 +1,33 @@
-.feedbacks{
-    display: flex;
+.feedbacks {
     margin-bottom: 50px;
     padding: 0 150px 50px;
 }
 
-.title{
+.title {
     margin: 15px 0 25px;
 }
 
-.comments{
-    gap: 30px;
+.comments {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.person {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex: 0 1 calc(50% - 25px);
+    box-sizing: border-box;
+    outline: solid;
+    outline: solid 1px #4a4a4a;
+    border-radius: 5px;
+    padding: 10px;
+    gap: 10px;
+}
+
+.divider {
+    all: unset;
+    height: 2px;
+    background-color: #4a4a4a;
 }

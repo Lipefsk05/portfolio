@@ -14,7 +14,7 @@ interface FadeContentProps {
 const FadeContent: React.FC<FadeContentProps> = ({
   children,
   blur = false,
-  duration = 1000,
+  duration = 500,
   easing = 'ease-out',
   delay = 0,
   threshold = 0.1,
@@ -31,10 +31,11 @@ const FadeContent: React.FC<FadeContentProps> = ({
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          observer.unobserve(element);
           setTimeout(() => {
             setInView(true);
           }, delay);
+        } else {
+          setInView(false);
         }
       },
       { threshold }

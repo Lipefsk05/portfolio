@@ -1,0 +1,9 @@
+/* Primeira vez que entra */
+.fade-in.first-view {
+  transition: opacity 1000ms ease-out, filter 1000ms ease-out;
+}
+
+/* Próximas vezes */
+.fade-in:not(.first-view) {
+  transition: opacity 100ms ease-out, filter 100ms ease-out;
+}

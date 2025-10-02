@@ -11,19 +11,17 @@
 
 .content{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-}
-
-.content article{
-    width: 50%;
     padding: 0 50px;
 }
+
 
 .texts{
     display: flex;
     flex-direction: column;
     gap: 5px;
+    width: 50%;
 }
 
 .texts h4{
@@ -39,4 +37,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 40%;
 }
