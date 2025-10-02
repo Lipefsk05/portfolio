@@ -335,7 +335,7 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
     <div
       ref={cursorRef}
       className="target-cursor-wrapper"
-      style={{ display: show ? 'block' : 'none' }}
+      style={{ opacity: show ? 1 : 0 }}
     >
       <div ref={dotRef} className="target-cursor-dot" />
       <div className="target-cursor-corner corner-tl" />
