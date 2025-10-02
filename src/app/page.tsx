@@ -12,6 +12,7 @@ import TargetCursor from "@/components/target-cursor/TargetCursor"
 import { useState, useEffect } from "react";
 
 
+
 export default function Home() {
   const [showCursor, setShowCursor] = useState(false);
 
@@ -23,6 +24,27 @@ export default function Home() {
     }
     return () => {
       document.body.style.cursor = "auto";
+    };
+  }, [showCursor]);
+
+  // Desativa o cursor customizado se a section habilidades sair da tela pelo scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const habilidadesSection = document.getElementById('habilidades');
+      if (!habilidadesSection) return;
+      const rect = habilidadesSection.getBoundingClientRect();
+      const sectionHeight = rect.height;
+      const visibleTop = Math.max(rect.top, 0);
+      const visibleBottom = Math.min(rect.bottom, window.innerHeight);
+      const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+      const visiblePercent = visibleHeight / sectionHeight;
+      if (visiblePercent < 0.5 && showCursor) {
+        setShowCursor(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
     };
   }, [showCursor]);
 
