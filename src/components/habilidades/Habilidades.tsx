@@ -9,44 +9,45 @@ import Ts from "../../../public/ts.svg"
 import Image from "next/image"
 
 
-export default function Habilidades() {
+interface HabilidadesProps {
+    setShowCursor: (show: boolean) => void;
+}
+
+export default function Habilidades({ setShowCursor }: HabilidadesProps) {
     return (
-        <section className="habilidades blur-background" id="habilidades">
+        <section
+            className="habilidades blur-background"
+            id="habilidades"
+            onMouseEnter={() => setShowCursor(true)}
+            onMouseLeave={() => setShowCursor(false)}
+        >
             <article><h2>Habilidades</h2></article>
             <article className="icons" >
-
-                <div className="divIcon">
+                <div className="divIcon cursor-target">
                     <Image src={Camera} alt="camera" className="icon" />
                     <h4>camera</h4>
                 </div>
-
-                <div className="divIcon">
+                <div className="divIcon cursor-target">
                     <Image src={Css} alt="css" className="icon" />
                     <h4>Css</h4>
                 </div>
-
-
-                <div className="divIcon">
+                <div className="divIcon cursor-target">
                     <Image src={Html} alt="html" className="icon" />
                     <h4>Html</h4>
                 </div>
-
-                <div className="divIcon">
+                <div className="divIcon cursor-target">
                     <Image src={Java} alt="java" className="icon" />
                     <h4>Java</h4>
                 </div>
-
-                <div className="divIcon">
+                <div className="divIcon cursor-target">
                     <Image src={Js} alt="Js" className="icon square" />
                     <h4>Js</h4>
                 </div>
-
-                <div className="divIcon">
+                <div className="divIcon cursor-target">
                     <Image src={Ts} alt="Ts" className="icon square" />
                     <h4>Ts</h4>
                 </div>
-
-                <div className="divIcon">
+                <div className="divIcon cursor-target">
                     <Image src={Cpp} alt="cpp" className="icon" />
                     <h4>C++</h4>
                 </div>

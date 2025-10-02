@@ -8,8 +8,24 @@ import Projetos from "@/components/projetos/Projetos";
 import Feedbacks from "@/components/feedbacks/FeedBacks"
 import Contato from "@/components/contato/Contato"
 import Footer from '@/components/footer/Footer';
+import TargetCursor from "@/components/target-cursor/TargetCursor"
+import { useState, useEffect } from "react";
+
 
 export default function Home() {
+  const [showCursor, setShowCursor] = useState(false);
+
+  useEffect(() => {
+    if (showCursor) {
+      document.body.style.cursor = "none";
+    } else {
+      document.body.style.cursor = "auto";
+    }
+    return () => {
+      document.body.style.cursor = "auto";
+    };
+  }, [showCursor]);
+
   return (
     <div style={{ position: 'relative' }}>
       <div className="background"
@@ -42,12 +58,16 @@ export default function Home() {
           transparent
         />
       </div>
-
+      <TargetCursor
+        spinDuration={2}
+        hideDefaultCursor={true}
+        show={showCursor}
+      />
       <Header />
       <main>
         <Hero />
         <Sobre />
-        <Habilidades />
+        <Habilidades setShowCursor={setShowCursor} />
         <Projetos />
         <Feedbacks />
         <Contato />
@@ -56,5 +76,7 @@ export default function Home() {
     </div>
   );
 }
+
+
 
 
