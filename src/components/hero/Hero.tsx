@@ -16,7 +16,28 @@ export default function Hero() {
                 <Image src={Logo} alt="Logo" className="logoHero" />
                 <TextType
 
-                    text={["Criatividade", "Inovação", "Desenvolvimento"]}
+                    text={[
+                        "Tecnologia",
+                        "Design",
+                        "Produtividade",
+                        "Transformação",
+                        "Soluções",
+                        "Experiência",
+                        "Aprendizado",
+                        "Colaboração",
+                        "Eficiência",
+                        "Resultados",
+                        "Conexão",
+                        "Futuro",
+                        "Progresso",
+                        "Impacto",
+                        "Qualidade",
+                        "Estratégia",
+                        "Visão",
+                        "Evolução",
+                        "Sucesso",
+                        "Inspiração"
+                    ]}
                     typingSpeed={80}
                     deletingSpeed={50}
                     pauseDuration={2000}

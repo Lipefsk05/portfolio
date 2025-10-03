@@ -21,7 +21,7 @@
 .blur-background {
   backdrop-filter: blur(3px);
   /* background-color: rgba(0, 0, 0, 0.5); */
-  border-radius: 50px;
+  border-radius: 25px;
   outline: .4px solid var(--dark-gray);
 }
 

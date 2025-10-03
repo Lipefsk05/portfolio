@@ -30,12 +30,28 @@ export default function FeedBacks() {
                             >
                                 <TextType
                                     text={[
-                                        "Me conte sua ideia",
-                                        "Quero um site de...",
-                                        "Tenho vontade de ter um...",
-                                        "Preciso criar algo para...",
-                                        "Quero fazer um projetosobre...",
+                                        "Me fale sobre sua ideia!",
+                                        "Quero transformar minha visão em realidade...",
+                                        "Tenho vontade de lançar um projeto novo...",
+                                        "Preciso de algo para resolver um problema específico...",
+                                        "Gostaria de colocar em prática uma iniciativa...",
+                                        "Estou pensando em desenvolver uma solução criativa...",
+                                        "Tenho em mente criar algo inovador...",
+                                        "Quero dar vida a uma ideia que tive...",
+                                        "Estou planejando construir uma experiência digital...",
+                                        "Preciso estruturar melhor meu projeto...",
+                                        "Gostaria de começar algo voltado para meu negócio...",
+                                        "Estou imaginando formas de facilitar meu trabalho...",
+                                        "Quero iniciar um projeto pessoal...",
+                                        "Tenho interesse em modernizar minha presença online...",
+                                        "Preciso criar algo para atender meus clientes...",
+                                        "Estou avaliando lançar uma plataforma interativa...",
+                                        "Quero experimentar novas ideias em tecnologia...",
+                                        "Tenho vontade de investir em uma aplicação prática...",
+                                        "Estou projetando algo para impactar mais pessoas...",
+                                        "Preciso colocar minha criatividade em ação..."
                                     ]}
+
                                     typingSpeed={60}
                                     pauseDuration={2000}
                                     textColors={["#6f6f6fff"]}
