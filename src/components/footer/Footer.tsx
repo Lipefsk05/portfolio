@@ -1,4 +1,3 @@
-import { section } from "framer-motion/client"
 import "./Style.css"
 
 export default function Footer(){
