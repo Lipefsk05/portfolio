@@ -47,9 +47,9 @@ export default function Hero() {
                 />
             </FadeContent>
             <article className="redesLogo">
-                <Image src={Insta} alt="Instagram logo" className="instaLogo" />
-                <Image src={Linkedin} alt="LinkedIn logo" className="linkedinLogo" />
-                <Image src={Email} alt="Email logo" className="emailLogo" />
+                <a href="instagram.com/lipe_fenske" target="_blank" ><Image src={Insta} alt="Instagram logo" className="instaLogo" /></a>
+                <a href="linkedin.com/in/felipe-antunes-404398322" target="_blank" ><Image src={Linkedin} alt="LinkedIn logo" className="linkedinLogo" /></a>
+                <a href="mailto:felipefenske05@gmail.com"><Image src={Email} alt="Email logo" className="emailLogo" /></a>
             </article>
         </section>
     )
