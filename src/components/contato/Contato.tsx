@@ -1,33 +1,68 @@
 import "./Style.css"
 import FadeContent from '@/components/fadecontent/FadeContent'
 import TextType from '@/components/text-type/TextType'
-import { useState } from 'react';
+import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 export default function FeedBacks() {
-    const [message, setMessage] = useState("");
-    const [isFocused, setIsFocused] = useState(false);
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [message, setMessage] = useState("")
+    const [isFocused, setIsFocused] = useState(false)
+
+    const sendEmail = () => {
+        if (!name || !email || !message) {
+            alert("Por favor, preencha todos os campos.")
+            return
+        }
+
+        const templateParams = {
+            from_name: name,
+            from_email: email,
+            message: message,
+        }
+
+        emailjs.send(
+            "service_gkmknhk", // substitua pelo seu Service ID
+            "template_004dkha", // substitua pelo seu Template ID
+            templateParams,
+            "eqCEvwjumTRs_WZ7G" // substitua pelo seu Public Key
+        ).then(
+            (response) => {
+                alert("Mensagem enviada com sucesso!")
+                setName("")
+                setEmail("")
+                setMessage("")
+            },
+            (error) => {
+                alert("Erro ao enviar a mensagem. Tente novamente.")
+                console.error(error)
+            }
+        )
+    }
+
     return (
         <section className="contato blur-background" id="contato">
             <h2 className="title">Contato</h2>
             <div className="inputs">
                 <FadeContent blur={true} easing="ease-out" initialOpacity={0} className="nomeEmail">
-                    <input type="text" placeholder="Digite seu nome" />
-                    <input type="email" placeholder="Digite seu email" />
+                    <input
+                        type="text"
+                        placeholder="Digite seu nome"
+                        value={name}
+                        onChange={e => setName(e.target.value)}
+                    />
+                    <input
+                        type="email"
+                        placeholder="Digite seu email"
+                        value={email}
+                        onChange={e => setEmail(e.target.value)}
+                    />
                 </FadeContent>
                 <FadeContent blur={true} easing="ease-out" initialOpacity={0} className="message">
                     <div style={{ position: "relative" }}>
-                        {/* TextType como placeholder visual */}
                         {!(isFocused || message) && (
-                            <div
-                                style={{
-                                    position: "absolute",
-                                    left: "16px",
-                                    top: "16px",
-                                    pointerEvents: "none",
-                                    color: "#888",
-                                    zIndex: 2,
-                                }}
-                            >
+                            <div style={{ position: "absolute", left: "16px", top: "16px", pointerEvents: "none", color: "#888", zIndex: 2 }}>
                                 <TextType
                                     text={[
                                         "Me fale sobre sua ideia!",
@@ -51,7 +86,6 @@ export default function FeedBacks() {
                                         "Estou projetando algo para impactar mais pessoas...",
                                         "Preciso colocar minha criatividade em ação..."
                                     ]}
-
                                     typingSpeed={60}
                                     pauseDuration={2000}
                                     textColors={["#6f6f6fff"]}
@@ -69,6 +103,9 @@ export default function FeedBacks() {
                             style={{ position: "relative", zIndex: 1, background: "transparent" }}
                         />
                     </div>
+                </FadeContent>
+                <FadeContent>
+                    <button className="send" onClick={sendEmail}>Enviar</button>
                 </FadeContent>
             </div>
         </section>

@@ -7,10 +7,10 @@ export default function Header() {
         <header>
             <div id="logo" className="heSec">
                 <Image src={Logo} alt="logo" className="logo" />
-                <select name="language" id="">
+                {/* <select name="language" className="linguagem">
                     <option value="pt">PT</option>
                     <option value="en">EN</option>
-                </select>
+                </select> */}
             </div>
             <div id="pages" className="heSec">
                 <a href="#hero"><h5>Home</h5></a>
