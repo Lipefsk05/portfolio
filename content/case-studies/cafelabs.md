@@ -136,4 +136,4 @@ Labs'.
 
 ---
 
-*Café Labs — Testar. Construir. Validar.*
+*Café Labs — Construir. Testar. Validar.*
